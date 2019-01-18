@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>JQ - Part03 Ex 02</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+    <button type="button" name="buttonUp" id="buttonUp">+</button>
+    <button type="button" name="buttonDown" id="buttonDown">-</button>
+    <!--<label for="count"></label><input type="text" name="count" id="count" value="0"/>-->
+    <label for="count"></label><textarea name="count" id="count">0</textarea>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            var count = 0;
+            $('#buttonUp').click(function () {
+                $('#count').html(++count);
+            });
+            $('#buttonDown').click(function () {
+                $('#count').html(--count);
+            });
+        });
+    </script>
+</body>
+</html>
